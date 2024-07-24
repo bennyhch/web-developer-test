@@ -1,5 +1,5 @@
 "use client";
-import { useGalleryData } from "@/lib/useGalleryData";
+import { GalleryData, useGalleryData } from "@/lib/useGalleryData";
 import { useState } from "react";
 import ImageCardContainer from "./ImageCardContainer";
 
@@ -9,22 +9,26 @@ export default function Home() {
   const [sortedNumbers, setSortedNumbers] = useState(data);
   const [toggleOrder, setToggleOrder] = useState(false);
 
-  const handleSort = () => {
+  const sortingHandler = () => {
     const newOrder = [...sortedNumbers].reverse();
     setSortedNumbers(newOrder);
     setToggleOrder(!toggleOrder);
   };
 
   return (
-    <main>
-      <h1 className="text-2xl font-bold mb-4">Web Developer Gallery</h1>
-      {/* <ImageCardContainer numbers={sortedNumbers} /> */}
-      {sortedNumbers.map((image, index) => (
-        <div>
-          <img src={`img/${image.filename}`} alt="" />
-        </div>
-      ))}
-      <button onClick={handleSort}>Sort</button>
+    <main className="flex flex-col items-center bg-pink-300 ">
+      <div className="bg-pink-200 p-6 rounded-lg shadow-lg w-11/12 lg:w-1/2">
+        <h1 className="text-2xl font-bold mb-4 text-center">
+          Web Developer Gallery
+        </h1>
+        <ImageCardContainer data={sortedNumbers} />
+        <button
+          onClick={sortingHandler}
+          className="mt-4 px-4 py-2 text-black rounded bg-white"
+        >
+          Sort
+        </button>
+      </div>
     </main>
   );
 }
