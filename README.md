@@ -1,5 +1,14 @@
 # Demo Video
 
+How I approach it
+
+1. Remove the ending comma in json
+2. Fetch the data on the frontend using the custom hook `useGalleryData`
+3. Manage all the states in the higher level component (i.e., `Home`) with the useState hook
+4. Create two components (i.e., `ImageCardContainer` and `ImageCard`) and render all the images in the UI
+5. Implement the reversing logic by declaring the handler (i.e., `sortingHandler`)
+6. Fix the css styling
+
 ![demo.gif](demo.gif)
 
 # Web Developer Task
