@@ -1,12 +1,16 @@
 import React from "react";
-import { GalleryData } from "@/lib/useGalleryData";
+import { GalleryImage } from "@/lib/useGalleryData";
 import ImageCard from "./ImageCard";
 
-const ImageCardContainer = ({ data }: { data: GalleryData[] }) => {
+const ImageCardContainer = ({
+  sortedNumbers,
+}: {
+  sortedNumbers: GalleryImage[];
+}) => {
   return (
     <div className="flex flex-wrap justify-center">
-      {data.map((image, index) => (
-        <ImageCard key={index} image={image} />
+      {sortedNumbers.map((sortedNumber, index) => (
+        <ImageCard key={index} image={sortedNumber} />
       ))}
     </div>
   );
