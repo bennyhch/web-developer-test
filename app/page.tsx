@@ -18,10 +18,18 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center bg-gradient-to-pink min-h-screen ">
-      <div className="bg-pink-200 p-6 rounded-lg shadow-lg w-11/12 lg:w-2/5 flex flex-col items-start">
-        <h1 className="text-2xl mb-4">Web Developer Gallery</h1>
+      <section
+        aria-labelledyby="gallery-heading"
+        className="bg-pink-200 p-6 rounded-lg shadow-lg w-11/12 lg:w-2/5 flex flex-col items-start"
+      >
+        <h1 id="gallery-heading" className="text-2xl mb-4">
+          Web Developer Gallery
+        </h1>
         <ImageCardContainer sortedNumbers={sortedNumbers} />
         <button
+          aria-label={`Sort in ${
+            isDescending ? "ascending" : "descending"
+          } order`}
           onClick={sortingHandler}
           className="mt-4 px-6 py-1 text-black rounded-3xl bg-white flex items-center space-x-2"
         >
@@ -31,7 +39,7 @@ export default function Home() {
             alt={isDescending ? "descending" : "ascending"}
           />
         </button>
-      </div>
+      </section>
     </main>
   );
 }

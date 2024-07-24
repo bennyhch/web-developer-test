@@ -3,7 +3,7 @@ import { GalleryImage } from "@/lib/useGalleryData";
 
 const ImageCard = ({ image }: { image: GalleryImage }) => {
   return (
-    <div>
+    <div role="listitem">
       <img
         src={`img/${image.filename}`}
         alt={image.altText}
