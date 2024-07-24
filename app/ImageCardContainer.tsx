@@ -7,9 +7,6 @@ const ImageCardContainer = ({ data }: { data: GalleryData[] }) => {
     <div className="flex flex-wrap justify-center">
       {data.map((image, index) => (
         <ImageCard key={index} image={image} />
-        // <div>
-        //   <img src={`img/${image.filename}`} alt="" />
-        // </div>
       ))}
     </div>
   );
