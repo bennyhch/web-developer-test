@@ -8,7 +8,7 @@ export default function Home() {
   const { data } = useGalleryData();
 
   const [sortedNumbers, setSortedNumbers] = useState(data);
-  const [isDescending, setIsDescending] = useState(false);
+  const [isDescending, setIsDescending] = useState(false); // toggle
 
   const sortingHandler = () => {
     const newOrder = [...sortedNumbers].reverse();
@@ -17,22 +17,19 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center bg-pink-300 min-h-screen ">
-      <div className="bg-pink-200 p-6 rounded-lg shadow-lg w-11/12 lg:w-1/2">
+    <main className="flex flex-col items-center justify-center bg-gradient-to-pink min-h-screen ">
+      <div className="bg-pink-200 p-6 rounded-lg shadow-lg w-11/12 lg:w-2/5 flex flex-col items-start">
         <h1 className="text-2xl mb-4">Web Developer Gallery</h1>
         <ImageCardContainer sortedNumbers={sortedNumbers} />
         <button
           onClick={sortingHandler}
-          className="mt-4 px-4 py-2 text-black rounded bg-white"
+          className="mt-4 px-6 py-1 text-black rounded-3xl bg-white flex items-center space-x-2"
         >
           <span>Sort</span>
-          <span>
-            {isDescending ? (
-              <img src="img/IconUp.svg" alt="descending" />
-            ) : (
-              <img src="img/IconDown.svg" alt="ascending" />
-            )}
-          </span>
+          <img
+            src={isDescending ? "img/IconUp.svg" : "img/IconDown.svg"}
+            alt={isDescending ? "descending" : "ascending"}
+          />
         </button>
       </div>
     </main>

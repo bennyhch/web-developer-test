@@ -7,7 +7,7 @@ const ImageCard = ({ image }: { image: GalleryImage }) => {
       <img
         src={`img/${image.filename}`}
         alt={image.altText}
-        className="h-20 w-full object-cover mb-2"
+        className="h-20 w-full object-cover"
       />
     </div>
   );

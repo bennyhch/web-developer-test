@@ -8,7 +8,7 @@ const ImageCardContainer = ({
   sortedNumbers: GalleryImage[];
 }) => {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-start gap-2 w-full">
       {sortedNumbers.map((sortedNumber, index) => (
         <ImageCard key={index} image={sortedNumber} />
       ))}
