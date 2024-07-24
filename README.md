@@ -8,6 +8,7 @@ How I approach it
 4. Create two components (i.e., `ImageCardContainer` and `ImageCard`) and render all the images in the UI
 5. Implement the reversing logic by declaring the handler (i.e., `sortingHandler`)
 6. Fix the css styling
+7. Improve accessibility 
 
 ![demo.gif](demo.gif)
 
