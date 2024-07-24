@@ -1,6 +1,10 @@
+# Demo Video
+
+![demo.gif](demo.gif)
+
 # Web Developer Task
 
-Hi there! Today's task is to replicate a simple gallery page in a starter Next.js app. 
+Hi there! Today's task is to replicate a simple gallery page in a starter Next.js app.
 
 You can refer to the design.png file in this repository or use a figma design you can find [here](https://www.figma.com/design/cqwIYXNHitVg2nAlMBfObA/Web-Developer-Test?node-id=0-1&t=nQJuZMDmryzLddLl-1)
 
